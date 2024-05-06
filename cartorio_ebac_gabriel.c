@@ -35,8 +35,8 @@ int registro()//Função responsável por cadastrar usuários no Sistema
 	fprintf(file,nome);
 	fclose(file);
 
-	file = fopen(arquivo, "a"); //Atualiza o Arquivo
-	fprintf(file,","); //Separa o arquivo por virgula
+	file = fopen(arquivo, "a");
+	fprintf(file,",");
 	fclose(file);
 	
 	printf("Digite o Sobrenome a ser Cadastrado: ");
@@ -46,8 +46,8 @@ int registro()//Função responsável por cadastrar usuários no Sistema
 	fprintf(file,sobrenome);
 	fclose(file);
 	
-	file = fopen(arquivo, "a"); //Atualiza o Arquivo
-	fprintf(file,","); //Separa o arquivo por virgula
+	file = fopen(arquivo, "a");
+	fprintf(file,",");
 	fclose(file);
 	
 	printf("Digite o Cargo a ser Cadastrado: ");
@@ -125,7 +125,8 @@ int main()
 		printf("Escolha a opção desejada no Menu\n\n");
 		printf("\t1 - Registrar Nomes\n");
 		printf("\t2 - Consultar Nomes\n");
-		printf("\t3 - Deletar Nomes\n\n");//Fim do Menu.
+		printf("\t3 - Deletar Nomes\n");
+		printf("\t4 - Sair do Sistema\n\n");//Fim do Menu.
 		printf("Opção: ");
 
 		scanf("%d", &opcao);//Armazenando as Escolhas do Usuário.
@@ -144,6 +145,11 @@ int main()
 			
 			case 3:
 			deletar();
+			break;
+			
+			case 4:
+			printf("Obrigado por Utilizar o Sistema!\n");
+			return 0;
 			break;
 			
 			default:
